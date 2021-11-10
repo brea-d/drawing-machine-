@@ -1,11 +1,21 @@
-html, body {
+html {
   margin: 0;
   padding: 0;
   
 }
+
+ body {
+   margin: 100px auto 0 auto; 
+   width: 80%;
+ }
 canvas {
+  margin: auto; 
   display: block;
-  
+  border: 5px solid rgb(115, 27, 173);
+  top: 00;
+  left: 0;
+  position: absolute;
+  z-index: -1;
 }
 
 h1{
