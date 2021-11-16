@@ -1,16 +1,38 @@
 <!DOCTYPE html><html lang="en"><head>
+    <title>Light Painting</title>
     <script src="p5.js"></script>
     <script src="p5.sound.min.js"></script>
     <link rel="stylesheet" type="text/css" href="style.css">
     <meta charset="utf-8">
     <script src="sketch.js"></script>
-
     <!-- fonts -->
     <link rel="stylesheet" href="https://use.typekit.net/rff4eul.css">
   </head>
-  <body>
-  <h1>This is a Drawing Machine</h1>
-  <p>hit 's' to save ya image</p>  
-  <p>hit 'd' to display ya image</p>
 
-</body></html>
+  <body>
+
+    <div class="instructions">
+      <h1>Painting with Light</h1>
+      <p>'d' to reveal your light painting or to reset</p>   
+       <p>'s' to save</p>   
+    </div> 
+
+    <!-- amb audio -->
+    <audio src="fireflyamb.mp3" id="my_audio" loop="loop" autoplay="autoplay"></audio>
+    <script type="text/javascript">
+      window.onload=function(){
+          document.getElementById("my_audio").play();
+          document.getElementById("my_audio").volume = 0.03;
+        }
+      </script>
+    
+
+    <!-- <div class="tools">
+      <div id="u" onclick="change_color(this)" class="stroke_color" style="background: rgb(226, 128, 128)"></div>
+      <div onclick="change_color(this)" class="stroke_color" style="background: rgb(147, 226, 128)"></div>
+      <div onclick="change_color(this)" class="stroke_color" style="background: rgb(128, 187, 226)"></div>
+      <div onclick="change_color(this)" class="stroke_color" style="background: rgb(226, 128, 221)"></div> -->
+
+</body>
+
+</html>

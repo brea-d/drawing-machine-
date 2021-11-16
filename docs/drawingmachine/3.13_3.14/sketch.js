@@ -14,7 +14,7 @@ function setup() {
 }
 
 function draw() {
-  if (mouseIsPressed) {
+  if (mousePressed) {
   
     background(220, 50, 133, 20);
 

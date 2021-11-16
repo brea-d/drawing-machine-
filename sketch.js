@@ -1,26 +1,45 @@
+// window.change_color = change_color;
+
 let array = [];
 // let backgroundColor = 200; 
 
-let noiseOffset = 0.0;
-let strokeWidth = 5;
+let noiseOffset = 5;
+let strokeWidth = 2;
+
+
+// let stroke_color = document.style.background;
 
 function setup() {
   createCanvas(windowWidth, windowHeight);
-  background(220, 50, 133);
+  background(9, 29, 87, 20);
 
   drawGrid();
-  strokeWeight(5);
-
+  strokeWeight(3);
 }
 
+// document.getElementById('u').onclick = change_color(this);
+
+// function change_color(element) {
+//   stroke_color = element.style.background; 
+//   console.log('color');
+// }
+
+// document.getElementById('change_color').onclick = change_color; 
+
+// function change_color(element) {
+//   document.body.style.color;
+//   return false;
+// }
+
 function draw() {
-  if (mouseIsPressed) {
+  if (mousePressed) {
+
   
-    background(220, 50, 133, 20);
+    background(9, 29, 87, 15);
 
     strokeWeight(strokeWidth);
 
-    noiseOffset += 0.05; 
+    noiseOffset += 0.30; 
     strokeWidth = noise(noiseOffset) * 100;
 
 
@@ -28,7 +47,7 @@ function draw() {
     // line(mouseX, mouseY, pmouseX, pmouseY);
     // array.push([mouseX, mouseY]);
 
-      stroke(map(mouseX, 0, 600, 0, 255, true));
+      stroke(map(mouseX, mouseY, 217, 172, 37, 30), 217, 100, 37, 255);
     line(width - mouseX, height - mouseY, width - pmouseX, height - pmouseY);
     line(mouseX, mouseY, pmouseX, pmouseY);
   }
@@ -41,9 +60,9 @@ function keyTyped (){
 
   if (key === 's'){
       // save this image 
-    saveCanvas('filename', 'png');
-  } else if (key === 'd'){
-        // display this image
+    saveCanvas('lightpainting', 'png');
+  } else if (key === 'c'){
+        // clear this image
     beginShape();
     for(let i = 0; i < array.length - 1; i++)
     {
